@@ -1,0 +1,10 @@
+# Configuration
+.editorconfig
+
+# Documentation
+LICENSE
+README.md
+
+# Docker stuff
+.dockerignore
+Dockerfile*
