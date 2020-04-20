@@ -15,10 +15,26 @@ There are no hard prerequisites for using AdonisJs, but having a conventional un
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`4.1-node.12.16.2`, `4.1-node.12.16`, `4.1-node.12`, `4.1-node.lts`, `4.1`, `4`, `current`, `latest`]()
-- [`4.1-node.12.16.2-alpine`, `4.1-node.12.16-alpine`, `4.1-node.12-alpine`, `4.1-node.lts-alpine`, `4.1-alpine`, `4-alpine`, `current-alpine`]()
+- [`4.1-node.12.16.2`, `4.1-node.12.16`, `4.1-node.12`, `4.1-node.lts`, `4.1`, `4`, `current`, `latest`](https://github.com/LucasRGoes/docker-adonisjs/blob/a23b2ebe1ba7ea268eca3e93469c2e62cdc1463a/Dockerfile)
+- [`4.1-node.12.16.2-alpine`, `4.1-node.12.16-alpine`, `4.1-node.12-alpine`, `4.1-node.lts-alpine`, `4.1-alpine`, `4-alpine`, `current-alpine`](https://github.com/LucasRGoes/docker-adonisjs/blob/a23b2ebe1ba7ea268eca3e93469c2e62cdc1463a/Dockerfile-alpine)
 
 ## How to use this image
+
+### Create a Dockerfile in your AdonisJs app project
+
+```Dockerfile
+# base image with your desired version lucasrgoes/adonis:<version>
+FROM lucasrgoes/adonis:4.1
+# replace this with your application's default port
+EXPOSE 8888
+```
+
+You can then build and run the Docker image. Don't forget to mount your app's project root inside the container on the /app folder:
+
+```bash
+docker build -t my-adonisjs-app .
+docker run -it --rm -v /my/app/folder:/app --name my-running-app my-adonisjs-app
+```
 
 ## Image variants
 
