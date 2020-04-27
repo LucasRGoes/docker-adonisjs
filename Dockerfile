@@ -6,7 +6,7 @@
 #	LucasRGoes/docker-adonisjs: https://github.com/LucasRGoes/docker-adonisjs
 #
 #   AdonisJs is a Node.js MVC framework that runs on all major operating
-# systems. It offers a stable ecosystem to write server-side web applications 
+# systems. It offers a stable ecosystem to write server-side web applications
 # so you can focus on business needs over finalizing which package to choose or
 # not.
 #
@@ -16,11 +16,13 @@ MAINTAINER lucas.rd.goes@gmail.com
 
 WORKDIR /app
 
+# change ownership of the "/app" dir to be used by the node user
 # install "dumb-init" to handle a container's child process problem
 RUN set -eux; \
+  chown node:node /app; \
  	apt-get update && apt-get install -y --no-install-recommends \
  	dumb-init; \
- 	apt-get clean && rm -rf /var/lib/apt/lists/* 
+ 	apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # rewrites npm global root directory
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
