@@ -15,8 +15,8 @@ There are no hard prerequisites for using AdonisJs, but having a conventional un
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`4.1-node.12.16.2`, `4.1-node.12.16`, `4.1-node.12`, `4.1-node.lts`, `4.1`, `4`, `current`, `latest`](https://github.com/LucasRGoes/docker-adonisjs/blob/a23b2ebe1ba7ea268eca3e93469c2e62cdc1463a/Dockerfile)
-- [`4.1-node.12.16.2-alpine`, `4.1-node.12.16-alpine`, `4.1-node.12-alpine`, `4.1-node.lts-alpine`, `4.1-alpine`, `4-alpine`, `current-alpine`](https://github.com/LucasRGoes/docker-adonisjs/blob/a23b2ebe1ba7ea268eca3e93469c2e62cdc1463a/Dockerfile-alpine)
+- [`4.1-node.12.18.1`, `4.1-node.12.18`, `4.1-node.12`, `4.1-node.lts`, `4.1`, `4`, `current`, `latest`](https://https://github.com/LucasRGoes/docker-adonisjs/blob/master/Dockerfile)
+- [`4.1-node.12.18.1-alpine`, `4.1-node.12.18-alpine`, `4.1-node.12-alpine`, `4.1-node.lts-alpine`, `4.1-alpine`, `4-alpine`, `current-alpine`](https://github.com/LucasRGoes/docker-adonisjs/blob/master/Dockerfile-alpine)
 
 ## How to use this image
 
