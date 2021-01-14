@@ -10,7 +10,7 @@
 # so you can focus on business needs over finalizing which package to choose or
 # not.
 #
-FROM node:12.18.1-stretch
+FROM node:14.15.4-stretch
 
 MAINTAINER lucas.rd.goes@gmail.com
 
