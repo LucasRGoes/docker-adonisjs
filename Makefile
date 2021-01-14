@@ -21,7 +21,19 @@ tag:
 
 push:
 	@docker login
-	docker push lucasrgoes/adonis
+	docker push lucasrgoes/adonis:4.1-node.14.15.4
+	docker push lucasrgoes/adonis:4.1-node.14.15
+	docker push lucasrgoes/adonis:4.1-node.14
+	docker push lucasrgoes/adonis:4.1-node.lts
+	docker push lucasrgoes/adonis:4.1
+	docker push lucasrgoes/adonis:4
+	docker push lucasrgoes/adonis:latest
+	docker push lucasrgoes/adonis:4.1-node.14.15.4-alpine
+	docker push lucasrgoes/adonis:4.1-node.14.15-alpine
+	docker push lucasrgoes/adonis:4.1-node.14-alpine
+	docker push lucasrgoes/adonis:4.1-node.lts-alpine
+	docker push lucasrgoes/adonis:4.1-alpine
+	docker push lucasrgoes/adonis:4-alpine
 
 clean:
 	@docker images | grep lucasrgoes/adonis | tr -s ' ' | cut -d ' ' -f 2 | xargs -I {} docker rmi lucasrgoes/adonis:{}
