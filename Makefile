@@ -1,8 +1,8 @@
-.PHONY: pull tag push clean all
+.PHONY: build tag push clean all
 
-pull:
-	docker pull lucasrgoes/adonis:current
-	docker pull lucasrgoes/adonis:current-alpine
+build:
+	docker build -f Dockerfile -t lucasrgoes/adonis:current
+	docker build -f Dockerfile-alpine -t lucasrgoes/adonis:current-alpine
 
 tag:
 	docker tag lucasrgoes/adonis:current lucasrgoes/adonis:4.1-node.16.14.2
@@ -21,6 +21,7 @@ tag:
 
 push:
 	@docker login
+	docker push lucasrgoes/adonis:current
 	docker push lucasrgoes/adonis:4.1-node.16.14.2
 	docker push lucasrgoes/adonis:4.1-node.16.14
 	docker push lucasrgoes/adonis:4.1-node.16
@@ -28,6 +29,7 @@ push:
 	docker push lucasrgoes/adonis:4.1
 	docker push lucasrgoes/adonis:4
 	docker push lucasrgoes/adonis:latest
+	docker push lucasrgoes/adonis:current-alpine
 	docker push lucasrgoes/adonis:4.1-node.16.14.2-alpine
 	docker push lucasrgoes/adonis:4.1-node.16.14-alpine
 	docker push lucasrgoes/adonis:4.1-node.16-alpine
@@ -38,4 +40,4 @@ push:
 clean:
 	@docker images | grep lucasrgoes/adonis | tr -s ' ' | cut -d ' ' -f 2 | xargs -I {} docker rmi lucasrgoes/adonis:{}
 
-all: pull tag push clean
+all: build tag push clean
