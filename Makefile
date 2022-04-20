@@ -1,8 +1,8 @@
 .PHONY: build tag push clean all
 
 build:
-	docker build -f Dockerfile -t lucasrgoes/adonis:current
-	docker build -f Dockerfile-alpine -t lucasrgoes/adonis:current-alpine
+	docker build -f Dockerfile -t lucasrgoes/adonis:current .
+	docker build -f Dockerfile-alpine -t lucasrgoes/adonis:current-alpine .
 
 tag:
 	docker tag lucasrgoes/adonis:current lucasrgoes/adonis:4.1-node.16.14.2
