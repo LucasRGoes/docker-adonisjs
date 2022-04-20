@@ -10,7 +10,7 @@
 # so you can focus on business needs over finalizing which package to choose or
 # not.
 #
-FROM node:14.15.5-stretch
+FROM node:16.14.2-stretch
 
 MAINTAINER lucas.rd.goes@gmail.com
 
@@ -31,7 +31,7 @@ ENV PATH=$PATH:/home/node/.npm-global/bin
 # install "adonis-cli" to handle apps built using the AdonisJs framework
 RUN set -eux; \
 	npm i -g \
-	@adonisjs/cli@4.0.12
+	@adonisjs/cli@4.0.13
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["node", "server.js"]
