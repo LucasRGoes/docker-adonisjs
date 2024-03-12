@@ -10,7 +10,7 @@
 # so you can focus on business needs over finalizing which package to choose or
 # not.
 #
-FROM node:16.14.2-alpine3.15
+FROM node:21.7.1-alpine3.18
 
 MAINTAINER lucas.rd.goes@gmail.com
 
